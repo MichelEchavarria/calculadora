@@ -71,11 +71,13 @@ const addNumberInput = (value) => {
   
   if(inputValue === "0" && inputValue.length === 1 && value != ',') {
     inputScreen.value = value;
-    console.log(value);
     return;
   }
+  if(value === ","){
+    console.log("te agarre coma")
+    value = 0 + ',';
+  }
   inputScreen.value = inputValue + value;
- 
 }
 
 
